@@ -53,5 +53,16 @@ public class CartUpdateHelper {
         }
 
     }
+
+    public void setQuantity(WebDriver driver, String quantity) throws InterruptedException{
+        count = driver.findElement(By.cssSelector("p#qty-1"));
+        total = driver.findElement(By.cssSelector("p#total"));
+        item = driver.findElement(By.cssSelector("p#checkout-1"));
+        value1 = Integer.parseInt(count.getText());
+        totalValue1 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
+        itemCount1 = Integer.parseInt(item.getText());
+        addItemElement = driver.findElement(By.cssSelector("[onclick='add_qty(1)']"));
+        addItemElement.sendKeys(quantity);
+    }
     
 }

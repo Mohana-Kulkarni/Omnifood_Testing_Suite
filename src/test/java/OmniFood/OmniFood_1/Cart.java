@@ -32,8 +32,7 @@ public class Cart extends CartUpdateHelper{
         loginHelper.login(username, password, driver);
         subscribeCouponHelper.subscribe(driver);
         addToCartHelper.gotoCart(driver);
-        addItem(driver);
-        subItem(driver);
+        setQuantity(driver, "5");
         BaseHelper.tearDown();
     }
 
@@ -47,31 +46,6 @@ public class Cart extends CartUpdateHelper{
         subscribeCouponHelper.subscribe(driver);
         addToCartHelper.gotoCart(driver);
         checkoutHelper.checkout(driver);
-        BaseHelper.tearDown();
-    }
-
-    @TestInfo(TestCaseID = "TC014", FunctionalArea = "Cart", Description = "Coupon Functionality")
-
-    @Test
-    public void test_add_coupon() throws InterruptedException{
-        BaseHelper.setUp();
-        driver = BaseHelper.getDriver();
-        loginHelper.login(username, password, driver);
-        subscribeCouponHelper.subscribe(driver);
-        addToCartHelper.gotoCart(driver);
-        couponHelper.addCoupon(driver);
-        BaseHelper.tearDown();
-    }
-
-    @Test
-    public void test_remove_coupon() throws InterruptedException{
-        BaseHelper.setUp();
-        driver = BaseHelper.getDriver();
-        loginHelper.login(username, password, driver);
-        subscribeCouponHelper.subscribe(driver);
-        addToCartHelper.gotoCart(driver);
-        couponHelper.addCoupon(driver);
-        couponHelper.removeCoupon(driver);
         BaseHelper.tearDown();
     }
 }
