@@ -2,7 +2,7 @@ package OmniFood.OmniFood_1;
 
 import OmniFood.BaseHelper;
 import org.Helper.LoginHelper.LoginHelper;
-import org.Helper.RedirectHelper.java.CartRedirectHelper;
+import org.Helper.RedirectHelper.CartRedirectHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 

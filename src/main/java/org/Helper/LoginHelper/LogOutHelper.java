@@ -9,11 +9,9 @@ public class LogOutHelper {
 
     WebElement logOutElement;
 
-    public void logOut(WebDriver driver) throws InterruptedException{
-       
+    public void logOut(WebDriver driver) throws InterruptedException{ 
         logOutElement = driver.findElement(By.linkText("Logout"));
         logOutElement.click();
-
     }
     
 }

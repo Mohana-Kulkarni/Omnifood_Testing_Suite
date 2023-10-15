@@ -14,8 +14,7 @@ public class Signup extends SignUpHelper {
     private String email = "user91@gmail.com";
     private String password = "12345";
     LoginHelper login = new LoginHelper();
-    WebDriver driver;
-    
+    WebDriver driver; 
 
     @TestInfo(TestCaseID = "TC002", FunctionalArea = "SignUp", Description = "SignUp Functionality")
 
@@ -25,8 +24,6 @@ public class Signup extends SignUpHelper {
         driver = BaseHelper.getDriver();
         signUp(username, password, email, driver);
         login.login(username, password, driver);
-        
     }
-
     
 }

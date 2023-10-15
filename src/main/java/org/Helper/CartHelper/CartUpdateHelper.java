@@ -31,7 +31,6 @@ public class CartUpdateHelper {
         }else{
             System.out.println("Add functionality does not work.");
         }
-        
     }
 
     public void subItem(WebDriver driver) throws InterruptedException{

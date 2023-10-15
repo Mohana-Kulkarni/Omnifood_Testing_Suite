@@ -15,15 +15,7 @@ public class LogOutOperation extends LogOutHelper{
     WebDriver driver;
     LoginHelper loginHelper = new LoginHelper();
 
-    
-    
-    
-    
-
-
-
     @TestInfo(TestCaseID = "TC003", FunctionalArea = "LogOut", Description = "LogOut Functionality")
-
 
     @Test
     public void test() throws InterruptedException{
@@ -31,8 +23,6 @@ public class LogOutOperation extends LogOutHelper{
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         logOut(driver);
-       
-
     }
     
 }

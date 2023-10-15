@@ -25,6 +25,5 @@ public class AddToCartHelper {
         AddMeal(driver);
         cartBtnElement = driver.findElement(By.cssSelector(".cart-btn > img[alt='cart-icon']"));
         cartBtnElement.click();
-
     }
 }

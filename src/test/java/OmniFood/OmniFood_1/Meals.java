@@ -14,15 +14,8 @@ public class Meals extends AddToCartHelper{
     private String password = "12345";
     WebDriver driver;
     LoginHelper loginHelper = new LoginHelper();
-    
-    
-    
-    
-
-
 
     @TestInfo(TestCaseID = "TC004", FunctionalArea = "Meals", Description = "Meals Functionality")
-
 
     @Test
     public void test() throws InterruptedException{
@@ -30,10 +23,6 @@ public class Meals extends AddToCartHelper{
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         gotoCart(driver);
-        
-
-       
-
     }
     
 }

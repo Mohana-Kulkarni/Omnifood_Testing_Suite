@@ -23,11 +23,7 @@ public class Cart extends CartUpdateHelper{
     CouponHelper couponHelper = new CouponHelper();
     CheckoutHelper checkoutHelper = new CheckoutHelper();
     
-    
-    
-    
     @TestInfo(TestCaseID = "TC005", FunctionalArea = "Cart", Description = "Cart Functionality")
-
 
     @Test
     public void test() throws InterruptedException{
@@ -40,12 +36,6 @@ public class Cart extends CartUpdateHelper{
         subItem(driver);
         couponHelper.addCoupon(driver);
         checkoutHelper.checkout(driver);
-
-
-        
-
-       
-
     }
     
 }

@@ -4,21 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-
-
-
-
-
-
 public class LoginHelper {
-
-    
 
     WebElement userElement;
     WebElement passwordElement;
     WebElement loginElement;
-
-        
 
     public void login(String username, String password, WebDriver driver) throws InterruptedException{
         
@@ -30,8 +20,7 @@ public class LoginHelper {
         
         loginElement = driver.findElement(By.cssSelector(".login-btn"));
         loginElement.click();
-       
-
+        
     }
     
 }

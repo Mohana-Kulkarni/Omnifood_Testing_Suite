@@ -1,10 +1,10 @@
-package org.Helper.RedirectHelper.java;
+package org.Helper.RedirectHelper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MealsRedirectHelper {
+public class CartRedirectHelper {
     WebElement howItWorksElement;
 
     WebElement mealsElement;
@@ -26,6 +26,5 @@ public class MealsRedirectHelper {
         cartElement = driver.findElement(By.cssSelector("li:nth-of-type(3) > .main-nav-link"));
         cartElement.click();
     }
-
-
+    
 }

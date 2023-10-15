@@ -2,10 +2,8 @@ package OmniFood.OmniFood_1;
 
 import OmniFood.BaseHelper;
 import org.Helper.LoginHelper.LoginHelper;
-import org.Helper.RedirectHelper.java.MealsRedirectHelper;
-import org.openqa.selenium.By;
+import org.Helper.RedirectHelper.MealsRedirectHelper;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class MealsNavbar extends MealsRedirectHelper {
@@ -22,7 +20,6 @@ public class MealsNavbar extends MealsRedirectHelper {
         loginHelper.login(username, password, driver);
         meals(driver);
         howItWorks(driver);
-
     }
 
     @Test

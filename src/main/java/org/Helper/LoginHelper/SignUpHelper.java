@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-
 public class SignUpHelper{
     WebElement registerElement;
     WebElement userElement;
@@ -12,7 +11,6 @@ public class SignUpHelper{
     WebElement passwordElement;
     WebElement signUpElement;
     LoginHelper loginHelper = new LoginHelper();
-
 
     public void signUp(String username, String password, String email, WebDriver driver) throws InterruptedException{
         registerElement = driver.findElement(By.cssSelector(".signup-link"));
@@ -29,8 +27,5 @@ public class SignUpHelper{
 
         signUpElement = driver.findElement(By.cssSelector(".login-btn"));
         signUpElement.click();        
-
-        
-
     }
 }
