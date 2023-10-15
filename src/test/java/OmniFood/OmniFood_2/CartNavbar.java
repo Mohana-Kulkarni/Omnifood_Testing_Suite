@@ -1,4 +1,4 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
 
 import OmniFood.BaseHelper;
 import OmniFood.TestInfo;

@@ -23,6 +23,7 @@ public class HomeNavbar extends NavBarHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         howItWorks(driver);
+        BaseHelper.tearDown();
     }
 
     @Test
@@ -31,6 +32,7 @@ public class HomeNavbar extends NavBarHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         meals(driver);
+        BaseHelper.tearDown();
     }
 
     @Test
@@ -39,6 +41,7 @@ public class HomeNavbar extends NavBarHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         testimonials(driver);
+        BaseHelper.tearDown();
     }
 
     @Test
@@ -47,6 +50,7 @@ public class HomeNavbar extends NavBarHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         pricing(driver);
+        BaseHelper.tearDown();
     }
     
 }

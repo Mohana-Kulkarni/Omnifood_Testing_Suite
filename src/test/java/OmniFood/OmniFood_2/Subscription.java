@@ -1,4 +1,4 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
 
 import java.time.Duration;
 

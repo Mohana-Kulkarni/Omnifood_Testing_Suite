@@ -24,6 +24,7 @@ public class MealsNavbar extends MealsRedirectHelper {
         loginHelper.login(username, password, driver);
         meals(driver);
         howItWorks(driver);
+        BaseHelper.tearDown();
     }
 
     @Test
@@ -33,6 +34,7 @@ public class MealsNavbar extends MealsRedirectHelper {
         loginHelper.login(username, password, driver);
         meals(driver);
         meals(driver);
+        BaseHelper.tearDown();
     }
 
     @Test
@@ -42,6 +44,7 @@ public class MealsNavbar extends MealsRedirectHelper {
         loginHelper.login(username, password, driver);
         meals(driver);
         cart(driver);
+        BaseHelper.tearDown();
     }
 
 

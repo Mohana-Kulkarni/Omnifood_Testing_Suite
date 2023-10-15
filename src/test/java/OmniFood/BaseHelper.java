@@ -14,7 +14,7 @@ public class BaseHelper {
         String jay = "D:/Assignment/BE Assignments/chromedriver-win64/chromedriver-win64/chromedriver.exe";
         String prathamesh = "C:\\Users\\Lenovo\\eclipse-workspace\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe";
 
-        System.setProperty("webdriver.chrome.driver",mohana);
+        System.setProperty("webdriver.chrome.driver",jay);
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--remote-allow-origins=*");
@@ -26,5 +26,8 @@ public class BaseHelper {
         return driver;
     }
     
+    public static void tearDown() {
+        driver.quit();
+    } 
     
 }

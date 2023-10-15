@@ -1,21 +1,21 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
 
 import OmniFood.BaseHelper;
 import OmniFood.TestInfo;
 
 import org.Helper.LoginHelper.LoginHelper;
-import org.Helper.RedirectHelper.CartRedirectHelper;
+import org.Helper.RedirectHelper.MealsRedirectHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class CartNavbar extends CartRedirectHelper {
+public class MealsNavbar extends MealsRedirectHelper {
 
     private String username = "Prathamesh";
     private String password = "12345";
     WebDriver driver;
     LoginHelper loginHelper = new LoginHelper();
 
-    @TestInfo(TestCaseID = "TC010", FunctionalArea = "Cart", Description = "Navigation Functionality")
+    @TestInfo(TestCaseID = "TC009", FunctionalArea = "Meals", Description = "Navigation Functionality")
 
     @Test
     public void test_how_it_works() throws InterruptedException{
@@ -23,7 +23,6 @@ public class CartNavbar extends CartRedirectHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         meals(driver);
-        cart(driver);
         howItWorks(driver);
         BaseHelper.tearDown();
     }
@@ -34,7 +33,6 @@ public class CartNavbar extends CartRedirectHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         meals(driver);
-        cart(driver);
         meals(driver);
         BaseHelper.tearDown();
     }
@@ -46,8 +44,8 @@ public class CartNavbar extends CartRedirectHelper {
         loginHelper.login(username, password, driver);
         meals(driver);
         cart(driver);
-        cart(driver);
         BaseHelper.tearDown();
     }
+
 
 }

@@ -23,6 +23,7 @@ public class LogOutOperation extends LogOutHelper{
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         logOut(driver);
+        BaseHelper.tearDown();
     }
     
 }

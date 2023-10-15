@@ -23,6 +23,7 @@ public class Meals extends AddToCartHelper{
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         gotoCart(driver);
+        BaseHelper.tearDown();
     }
     
 }

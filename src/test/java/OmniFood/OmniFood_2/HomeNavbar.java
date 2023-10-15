@@ -1,29 +1,27 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
+
+import org.Helper.HomePageHelper.NavBarHelper;
+import org.Helper.LoginHelper.LoginHelper;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import OmniFood.BaseHelper;
 import OmniFood.TestInfo;
 
-import org.Helper.LoginHelper.LoginHelper;
-import org.Helper.RedirectHelper.CartRedirectHelper;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
-
-public class CartNavbar extends CartRedirectHelper {
+public class HomeNavbar extends NavBarHelper {
 
     private String username = "Prathamesh";
     private String password = "12345";
     WebDriver driver;
     LoginHelper loginHelper = new LoginHelper();
 
-    @TestInfo(TestCaseID = "TC010", FunctionalArea = "Cart", Description = "Navigation Functionality")
+    @TestInfo(TestCaseID = "TC007", FunctionalArea = "Home", Description = "Navigation Functionality")
 
     @Test
     public void test_how_it_works() throws InterruptedException{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
-        meals(driver);
-        cart(driver);
         howItWorks(driver);
         BaseHelper.tearDown();
     }
@@ -34,20 +32,25 @@ public class CartNavbar extends CartRedirectHelper {
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
         meals(driver);
-        cart(driver);
-        meals(driver);
         BaseHelper.tearDown();
     }
 
     @Test
-    public void test_cart() throws InterruptedException{
+    public void test_testimonials() throws InterruptedException{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
-        meals(driver);
-        cart(driver);
-        cart(driver);
+        testimonials(driver);
         BaseHelper.tearDown();
     }
 
+    @Test
+    public void test_pricing() throws InterruptedException{
+        BaseHelper.setUp();
+        driver = BaseHelper.getDriver();
+        loginHelper.login(username, password, driver);
+        pricing(driver);
+        BaseHelper.tearDown();
+    }
+    
 }

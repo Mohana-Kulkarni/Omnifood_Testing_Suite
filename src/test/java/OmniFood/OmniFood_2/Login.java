@@ -1,4 +1,4 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
 
 import org.Helper.LoginHelper.LoginHelper;
 import org.openqa.selenium.WebDriver;

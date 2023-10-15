@@ -1,4 +1,4 @@
-package OmniFood.OmniFood_1;
+package OmniFood.OmniFood_2;
 
 import org.Helper.CartHelper.SubscribeCouponHelper;
 import org.Helper.CartHelper.CartUpdateHelper;
