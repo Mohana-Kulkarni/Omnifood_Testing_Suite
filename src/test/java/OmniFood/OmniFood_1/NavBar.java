@@ -22,9 +22,6 @@ public class NavBar extends NavBarHelper {
 
 
 
-    @TestInfo(TestCaseID = "TC001", FunctionalArea = "Login", Description = "LogIn Functionality")
-
-
     @Test
     public void test() throws InterruptedException{
         BaseHelper.setUp();
