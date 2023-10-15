@@ -1,4 +1,4 @@
-package regressionTest;
+package OmniFood;
 
 import java.time.Duration;
 

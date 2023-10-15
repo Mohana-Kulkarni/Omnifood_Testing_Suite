@@ -1,4 +1,4 @@
-package org.example.Helper.HomePageHelper;
+package org.Helper.HomePageHelper;
 
 public class SubscriptionHelper {
     
