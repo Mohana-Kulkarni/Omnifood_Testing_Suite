@@ -33,12 +33,12 @@ public class NavBarHelper {
     }
 
     public void testimonials(WebDriver driver){
-        Testimonials = driver.findElement(By.cssSelector("li:nth-of-type(2) > .main-nav-link"));
+        Testimonials = driver.findElement(By.cssSelector("li:nth-of-type(3) > .main-nav-link"));
         Testimonials.click();
     }
 
     public void pricing(WebDriver driver){
-        Pricing = driver.findElement(By.cssSelector("li:nth-of-type(2) > .main-nav-link"));
+        Pricing = driver.findElement(By.cssSelector("li:nth-of-type(4) > .main-nav-link"));
         Pricing.click();
     }
 }
