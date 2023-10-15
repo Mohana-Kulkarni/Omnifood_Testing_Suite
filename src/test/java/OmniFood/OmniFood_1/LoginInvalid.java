@@ -12,11 +12,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import OmniFood.BaseHelper;
+import OmniFood.TestInfo;
 
 public class LoginInvalid extends LoginHelper {
     WebElement errorMessage;
     WebDriver driver;
     
+    @TestInfo(TestCaseID = "TC012", FunctionalArea = "Login", Description = "Error Validation")
+
     @Test
     public void test_InvalidPassword() throws InterruptedException{
         String username = "Prathamesh";

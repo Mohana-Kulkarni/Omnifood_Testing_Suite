@@ -28,8 +28,23 @@ public class CouponHelper {
             System.out.println("Coupon Functionality Works");
         }else{
             System.out.println("Coupon Functionality Does Not Work");
+        } 
+    }
+    
+    public void removeCoupon(WebDriver driver) throws InterruptedException{
+        total = driver.findElement(By.cssSelector("p#total"));
+        total1 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
+        viewCouponElement = driver.findElement(By.cssSelector("[onclick] > p:nth-of-type(1)"));
+        String couponName = viewCouponElement.getText();
+        discount = Integer.parseInt(couponName.substring(couponName.length()-2, couponName.length()));
+        viewCouponElement.click();
+        Thread.sleep(1000);
+        total2 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
+        discount = total2 - (total2*discount)/100;
+        if(discount==total1) {
+            System.out.println("Coupon Removal Works");
+        }else{
+            System.out.println("Coupon Removal Does Not Work");
         }
-
-        
     }
 }

@@ -13,11 +13,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import OmniFood.BaseHelper;
+import OmniFood.TestInfo;
 
 public class SignupInvalid extends SignUpHelper {
     LoginHelper login = new LoginHelper();
     WebElement errorMessage;
     WebDriver driver;
+
+    @TestInfo(TestCaseID = "TC013", FunctionalArea = "Signup", Description = "Error Validation")
 
     @Test
     public void test_email_already_exists() throws InterruptedException{

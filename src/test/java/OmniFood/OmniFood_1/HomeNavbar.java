@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import OmniFood.BaseHelper;
+import OmniFood.TestInfo;
 
 public class HomeNavbar extends NavBarHelper {
 
@@ -13,6 +14,8 @@ public class HomeNavbar extends NavBarHelper {
     private String password = "12345";
     WebDriver driver;
     LoginHelper loginHelper = new LoginHelper();
+
+    @TestInfo(TestCaseID = "TC007", FunctionalArea = "Home", Description = "Navigation Functionality")
 
     @Test
     public void test_how_it_works() throws InterruptedException{

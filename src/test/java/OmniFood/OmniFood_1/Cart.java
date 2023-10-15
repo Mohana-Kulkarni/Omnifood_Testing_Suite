@@ -23,10 +23,10 @@ public class Cart extends CartUpdateHelper{
     CouponHelper couponHelper = new CouponHelper();
     CheckoutHelper checkoutHelper = new CheckoutHelper();
     
-    @TestInfo(TestCaseID = "TC005", FunctionalArea = "Cart", Description = "Cart Functionality")
+    @TestInfo(TestCaseID = "TC005", FunctionalArea = "Cart", Description = "Quantity Functionality")
 
     @Test
-    public void test() throws InterruptedException{
+    public void test_meal_quantity() throws InterruptedException{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -34,8 +34,40 @@ public class Cart extends CartUpdateHelper{
         addToCartHelper.gotoCart(driver);
         addItem(driver);
         subItem(driver);
-        couponHelper.addCoupon(driver);
+    }
+
+    @TestInfo(TestCaseID = "TC006", FunctionalArea = "Cart", Description = "Checkout Functionality")
+    
+    @Test
+    public void test_checkout() throws InterruptedException{
+        BaseHelper.setUp();
+        driver = BaseHelper.getDriver();
+        loginHelper.login(username, password, driver);
+        subscribeCouponHelper.subscribe(driver);
+        addToCartHelper.gotoCart(driver);
         checkoutHelper.checkout(driver);
     }
-    
+
+    @TestInfo(TestCaseID = "TC014", FunctionalArea = "Cart", Description = "Coupon Functionality")
+
+    @Test
+    public void test_add_coupon() throws InterruptedException{
+        BaseHelper.setUp();
+        driver = BaseHelper.getDriver();
+        loginHelper.login(username, password, driver);
+        subscribeCouponHelper.subscribe(driver);
+        addToCartHelper.gotoCart(driver);
+        couponHelper.addCoupon(driver);
+    }
+
+    @Test
+    public void test_remove_coupon() throws InterruptedException{
+        BaseHelper.setUp();
+        driver = BaseHelper.getDriver();
+        loginHelper.login(username, password, driver);
+        subscribeCouponHelper.subscribe(driver);
+        addToCartHelper.gotoCart(driver);
+        couponHelper.addCoupon(driver);
+        couponHelper.removeCoupon(driver);
+    }
 }
