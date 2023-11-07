@@ -21,7 +21,7 @@ public class CouponHelper {
         discount =Integer.parseInt(offer.getText().replaceAll("[^0-9]", ""));
         apply = driver.findElement(By.cssSelector("button#apply-coupon-btn"));
         apply.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         total2 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
         discount = total1 - ((total1*discount)/100);
         if(discount==total2){
@@ -38,7 +38,7 @@ public class CouponHelper {
         String couponName = viewCouponElement.getText();
         discount = Integer.parseInt(couponName.substring(couponName.length()-2, couponName.length()));
         viewCouponElement.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         total2 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
         discount = total2 - (total2*discount)/100;
         if(discount==total1) {

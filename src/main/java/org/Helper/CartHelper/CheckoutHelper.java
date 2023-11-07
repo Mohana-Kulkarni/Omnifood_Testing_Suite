@@ -8,9 +8,10 @@ public class CheckoutHelper {
     WebElement  checkout;
     Boolean result;
 
-    public void checkout(WebDriver driver){
+    public void checkout(WebDriver driver) throws Exception{
         checkout = driver.findElement(By.cssSelector(".checkout-btn"));
         checkout.click();
+        Thread.sleep(1500);
         result =  driver.findElement(By.cssSelector(".delivery-img")).isDisplayed();
         if(result){
             System.out.println("CheckOut Functionality Works");

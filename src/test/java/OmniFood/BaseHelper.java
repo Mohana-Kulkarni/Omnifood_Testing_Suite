@@ -19,7 +19,7 @@ public class BaseHelper {
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
-        driver.get("https://omnifood-meals.000webhostapp.com/login.php");
+        driver.get("http://localhost/online_food_ordering_system/Omnifood-2.0/Omnifood-2.0/login.php");
     }
 
     public static WebDriver getDriver(){

@@ -25,7 +25,7 @@ public class Subscription extends SubscribeCouponHelper {
     @TestInfo(TestCaseID = "TC011", FunctionalArea = "Pricing", Description = "Subscription Functionality")
 
     @Test
-    public void test_subscription_complete() throws InterruptedException {
+    public void test_subscription_complete() throws Exception {
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -38,7 +38,7 @@ public class Subscription extends SubscribeCouponHelper {
     }
 
     @Test
-    public void test_subscription_starter() throws InterruptedException {
+    public void test_subscription_starter() throws Exception {
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -47,6 +47,19 @@ public class Subscription extends SubscribeCouponHelper {
         wait.until(ExpectedConditions.textToBe(By.cssSelector("button#starter-btn"), "Already Subscribed"));
         subscribeBtn = driver.findElement(By.cssSelector("button#starter-btn"));
         Assert.assertEquals(subscribeBtn.getText(), "Already Subscribed");
+        BaseHelper.tearDown();
+    }
+    
+    @Test
+    public void test_unsubscription() throws Exception {
+        BaseHelper.setUp();
+        driver = BaseHelper.getDriver();
+        loginHelper.login(username, password, driver);
+        unsubscribe(driver);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("button#starter-btn"), "Already Subscribed"));
+        subscribeBtn = driver.findElement(By.cssSelector("button#starter-btn"));
+        Assert.assertEquals(subscribeBtn.getText(), "Get Subscription");
         BaseHelper.tearDown();
     }
 }

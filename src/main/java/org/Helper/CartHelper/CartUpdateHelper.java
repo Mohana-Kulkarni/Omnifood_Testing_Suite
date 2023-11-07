@@ -22,7 +22,7 @@ public class CartUpdateHelper {
         itemCount1 = Integer.parseInt(item.getText());
         addItemElement = driver.findElement(By.cssSelector("[onclick='add_qty(1)']"));
         addItemElement.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         value2 = Integer.parseInt(count.getText());
         totalValue2 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
         itemCount2 = Integer.parseInt(item.getText());
@@ -42,7 +42,7 @@ public class CartUpdateHelper {
         itemCount1 = Integer.parseInt(item.getText());
         subItemElement = driver.findElement(By.cssSelector("[onclick='sub_qty(1)']"));
         subItemElement.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         value2 = Integer.parseInt(count.getText());
         totalValue2 = Integer.parseInt(total.getText().replaceAll("[^0-9]", ""));
         itemCount2 = Integer.parseInt(item.getText());
@@ -63,6 +63,7 @@ public class CartUpdateHelper {
         itemCount1 = Integer.parseInt(item.getText());
         addItemElement = driver.findElement(By.cssSelector("[onclick='add_qty(1)']"));
         addItemElement.sendKeys(quantity);
+        Thread.sleep(1500);
     }
     
 }

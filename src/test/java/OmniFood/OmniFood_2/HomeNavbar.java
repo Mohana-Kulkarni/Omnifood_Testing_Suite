@@ -18,7 +18,7 @@ public class HomeNavbar extends NavBarHelper {
     @TestInfo(TestCaseID = "TC007", FunctionalArea = "Home", Description = "Navigation Functionality")
 
     @Test
-    public void test_how_it_works() throws InterruptedException{
+    public void test_how_it_works() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -27,7 +27,7 @@ public class HomeNavbar extends NavBarHelper {
     }
 
     @Test
-    public void test_meals() throws InterruptedException{
+    public void test_meals() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -36,7 +36,7 @@ public class HomeNavbar extends NavBarHelper {
     }
 
     @Test
-    public void test_testimonials() throws InterruptedException{
+    public void test_testimonials() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -45,7 +45,7 @@ public class HomeNavbar extends NavBarHelper {
     }
 
     @Test
-    public void test_pricing() throws InterruptedException{
+    public void test_pricing() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);

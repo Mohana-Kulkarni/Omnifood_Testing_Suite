@@ -12,6 +12,7 @@ public class LogOutHelper {
     public void logOut(WebDriver driver) throws InterruptedException{ 
         logOutElement = driver.findElement(By.linkText("Logout"));
         logOutElement.click();
+        Thread.sleep(1500);
     }
     
 }

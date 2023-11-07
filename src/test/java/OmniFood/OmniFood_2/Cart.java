@@ -26,7 +26,7 @@ public class Cart extends CartUpdateHelper{
     @TestInfo(TestCaseID = "TC005", FunctionalArea = "Cart", Description = "Quantity Functionality")
 
     @Test
-    public void test_meal_quantity() throws InterruptedException{
+    public void test_meal_quantity() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -40,7 +40,7 @@ public class Cart extends CartUpdateHelper{
     @TestInfo(TestCaseID = "TC006", FunctionalArea = "Cart", Description = "Checkout Functionality")
     
     @Test
-    public void test_checkout() throws InterruptedException{
+    public void test_checkout() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -53,7 +53,7 @@ public class Cart extends CartUpdateHelper{
     @TestInfo(TestCaseID = "TC014", FunctionalArea = "Cart", Description = "Coupon Functionality")
 
     @Test
-    public void test_add_coupon() throws InterruptedException{
+    public void test_add_coupon() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
@@ -64,7 +64,7 @@ public class Cart extends CartUpdateHelper{
     }
 
     @Test
-    public void test_remove_coupon() throws InterruptedException{
+    public void test_remove_coupon() throws Exception{
         BaseHelper.setUp();
         driver = BaseHelper.getDriver();
         loginHelper.login(username, password, driver);
